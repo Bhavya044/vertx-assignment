@@ -9,7 +9,7 @@ const Navbar: React.FC<INavbar> = ({ activeTab }) => {
   const isMobile = useIsMobile();
   const navTabs = isMobile ? mobileNavbarTabs : desktopNavbarTabs;
   return (
-    <div className="border-t border-t-divider-100 py-4 px-7 h-full ">
+    <div className="border-t border-t-divider-100 lg:border-0 py-4 px-7 h-full ">
       <div className="flex justify-between flex-row lg:flex-col h-full sm:h-1/2 ">
         {navTabs?.map((tab) => (
           <div className="flex flex-col justify-center items-center  lg:items-start h-full gap-1.5 xs:gap-4">
