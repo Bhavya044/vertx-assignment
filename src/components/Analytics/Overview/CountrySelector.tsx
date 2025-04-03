@@ -2,7 +2,7 @@ import React from "react";
 
 const CountrySelector: React.FC = () => {
   return (
-    <div className="m:flex hidden  space-x-[28px] absolute bottom-0 left-[180px] transform -translate-x-1/2 border border-divider-100 bg-black py-1.5 px-5 rounded-full">
+    <div className="md:flex hidden space-x-[28px] absolute bottom-0 left-[180px] transform -translate-x-1/2 border border-divider-100 bg-black py-1.5 px-5 rounded-full">
       <div className="flex items-center space-x-2">
         <div className="w-3 h-3 bg-indigo-500 rounded-full"></div>
         <span className="text-white text-xs">India</span>

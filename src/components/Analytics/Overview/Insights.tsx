@@ -11,6 +11,7 @@ const Insights = () => {
           <Tag text="Visitors" className=" text-left pr-12 pl-3 py-1" />
         </div>
       }
+      className="lg:min-h-[309px]"
       title="Insights"
     >
       <div className="flex lg:flex-col flex-row lg:gap-3  justify-between">

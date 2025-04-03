@@ -9,7 +9,7 @@ const Chart = () => {
         <div className="flex gap-1.5">
           <Tag text="Visitors" className="text-left pr-12 pl-3 py-1" />
           <Tag text="Last 30 days" />
-          <Tag text="+Add" className="border-dashed" />
+          <Tag text="+Compare" className="border-dashed" />
         </div>
       }
     >

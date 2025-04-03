@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import for routing
 import Avatar from "./UI/Avatar";
 import Tabs from "./UI/Tabs";
 import Icon from "./UI/Icon";
@@ -24,11 +25,22 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ currentTab, setCurrentTab }) => {
   const tabs = tabGroups[currentTab] || [];
+  const navigate = useNavigate(); // Initialize navigation
   const [activeTab, setActiveTab] = useState(tabs.length > 0 ? tabs[0].id : "");
 
   useEffect(() => {
     setActiveTab(tabs[0]?.id);
   }, [currentTab]);
+
+  useEffect(() => {
+    if (currentTab === "Analytics" && activeTab === "overview") {
+      navigate("/analytics/overview"); // Push navigation route
+    } else if (currentTab === "Profile" && activeTab === "overview") {
+      navigate("/profile/overview"); // Push navigation rout
+    } else {
+      navigate("/");
+    }
+  }, [currentTab, activeTab, navigate]);
 
   return (
     <header className="w-full">
