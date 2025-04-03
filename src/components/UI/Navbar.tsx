@@ -9,10 +9,10 @@ const Navbar: React.FC<INavbar> = ({ activeTab }) => {
   const isMobile = useIsMobile();
   const navTabs = isMobile ? mobileNavbarTabs : desktopNavbarTabs;
   return (
-    <div className="border-t border-t-divider-100 lg:border-0 py-4 px-7 h-full ">
-      <div className="flex justify-between flex-row lg:flex-col h-full sm:h-1/2 ">
+    <div className="border-t border-t-divider-100 lg:border-0  h-full lg:p-0 p-2">
+      <div className="flex justify-between flex-row lg:flex-col h-full lg:h-[282px] mt-4 mb-2.5 ml-4 mr-4 ">
         {navTabs?.map((tab) => (
-          <div className="flex flex-col justify-center items-center  lg:items-start h-full gap-1.5 xs:gap-4">
+          <div className="flex flex-col justify-center items-center  lg:items-start h-full gap-0.5 ">
             {tab.iconName ? (
               <Icon
                 iconName={tab.iconName}
@@ -26,7 +26,7 @@ const Navbar: React.FC<INavbar> = ({ activeTab }) => {
                 activeTab === tab.tabName
                   ? "lg:text-gray-300"
                   : "lg:text-inactive-100"
-              } lg:text-sm tracking-widest`}
+              } lg:text-sm `}
             >
               {" "}
               {tab.tabName}

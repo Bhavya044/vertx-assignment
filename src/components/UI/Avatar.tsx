@@ -1,19 +1,14 @@
 import React from "react";
 
 interface AvatarProps {
-  name: string;
-  imageUrl?: string;
-  size?: "sm" | "md" | "lg";
+  name?: string;
   isOnline?: boolean;
+  logo?: string;
 }
 
-const Avatar: React.FC<AvatarProps> = ({
-  name,
-  imageUrl,
-  isOnline = false,
-}) => {
+const Avatar: React.FC<AvatarProps> = ({ name, isOnline = false, logo }) => {
   const initials = name
-    .split(" ")
+    ?.split(" ")
     .map((word) => word[0])
     .join("")
     .toUpperCase();
@@ -23,9 +18,9 @@ const Avatar: React.FC<AvatarProps> = ({
       <div
         className={`flex items-center text-xs justify-center rounded-full h-[30px] w-[30px] bg-gray-700 text-white font-semibold`}
       >
-        {imageUrl ? (
+        {logo ? (
           <img
-            src={imageUrl}
+            src={logo}
             alt={name}
             className="rounded-full object-cover w-full h-full"
           />
@@ -35,11 +30,13 @@ const Avatar: React.FC<AvatarProps> = ({
       </div>
 
       {/* Status Dot */}
-      <span
-        className="absolute bottom-0 right-0 w-2 h-2 rounded-full flex items-center justify-center 
+      {!logo ? (
+        <span
+          className="absolute bottom-0 right-0 w-2 h-2 rounded-full flex items-center justify-center 
         text-xs font-bold text-white"
-        style={{ backgroundColor: isOnline ? "#22C55E" : "#EF4444" }}
-      />
+          style={{ backgroundColor: isOnline ? "#22C55E" : "#EF4444" }}
+        />
+      ) : null}
     </div>
   );
 };
