@@ -1,4 +1,3 @@
-import React from "react";
 import Card from "../../UI/Card";
 import Tag from "../../UI/Tag";
 import CountryStats from "./CountryStats";
