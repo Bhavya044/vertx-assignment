@@ -3,4 +3,5 @@ export type iconNames =
   | "analytics"
   | "connect"
   | "activity"
-  | "dealroom";
+  | "dealroom"
+  | "menu";

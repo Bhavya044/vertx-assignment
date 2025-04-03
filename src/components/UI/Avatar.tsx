@@ -4,9 +4,15 @@ interface AvatarProps {
   name?: string;
   isOnline?: boolean;
   logo?: string;
+  onClick?: () => void;
 }
 
-const Avatar: React.FC<AvatarProps> = ({ name, isOnline = false, logo }) => {
+const Avatar: React.FC<AvatarProps> = ({
+  name,
+  isOnline = false,
+  logo,
+  onClick,
+}) => {
   const initials = name
     ?.split(" ")
     .map((word) => word[0])
@@ -14,7 +20,7 @@ const Avatar: React.FC<AvatarProps> = ({ name, isOnline = false, logo }) => {
     .toUpperCase();
 
   return (
-    <div className="relative inline-block">
+    <div className="relative inline-block" onClick={() => onClick?.()}>
       <div
         className={`flex items-center text-xs justify-center rounded-full h-[30px] w-[30px] bg-gray-700 text-white font-semibold`}
       >

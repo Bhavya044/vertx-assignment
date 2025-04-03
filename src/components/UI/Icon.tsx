@@ -7,6 +7,7 @@ const iconMap: Record<iconNames, string> = {
   activity: "/bell.svg",
   connect: "/globe.svg",
   dealroom: "/connect.svg",
+  menu: "/menu.svg",
 };
 
 interface IconProps {
@@ -29,7 +30,6 @@ const Icon: React.FC<IconProps> = ({ iconName, size = 24, className }) => {
       width={size}
       height={size}
       className={className}
-      style={{ outline: "2px solid black" }}
     />
   );
 };
