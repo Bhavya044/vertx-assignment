@@ -13,7 +13,7 @@ const Insights = () => {
       }
       title="Insights"
     >
-      <div className="flex justify-between">
+      <div className="flex lg:flex-col flex-row lg:gap-3  justify-between">
         <InfoCard
           title="Founders"
           additionalInfo="(000)"
@@ -28,9 +28,9 @@ const Insights = () => {
         />
       </div>
       <div className="border-1 border-divider-100" />
-      <div className="mt-5 flex justify-end items-center gap-3">
+      <div className="mt-3 flex justify-end items-center gap-3">
         <span className="text-[10px]">View detailed Insights</span>
-        <Icon iconName="right-arrow" size={11} />
+        <Icon iconName="right-arrow" size={14} />
       </div>
     </Card>
   );

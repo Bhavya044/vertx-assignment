@@ -20,7 +20,9 @@ const Tabs: React.FC<TabProps> = ({ tabs, activeTab, setActiveTab }) => {
                 ? "lg:font-bold text-white"
                 : " lg:text-inactive-100 text-white hover:text-white"
             }`}
-            onClick={() => setActiveTab(tab.id)}
+            onClick={() => {
+              setActiveTab(tab.id);
+            }}
           >
             {tab.name}
             {activeTab === tab.id && (

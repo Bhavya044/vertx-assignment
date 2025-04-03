@@ -51,14 +51,24 @@ export const countryData = [
     country: "India",
     flag: "/flags/India.png",
     percentage: 40,
-    color: "#3248a8",
+    color: "rgba(72, 52, 212, 1)",
   },
-  { country: "USA", flag: "/flags/USA.png", percentage: 25, color: "orange" },
+  {
+    country: "USA",
+    flag: "/flags/USA.png",
+    percentage: 25,
+    color: "rgba(189, 83, 2, 1)",
+  },
   {
     country: "Canada",
     flag: "/flags/canada.png",
     percentage: 10,
-    color: "#FACC15",
+    color: "rgba(233, 193, 107, 1)",
   },
-  { country: "UAE", flag: "/flags/uae.jpg", percentage: 7, color: "#16A34A" },
+  {
+    country: "UAE",
+    flag: "/flags/uae.jpg",
+    percentage: 7,
+    color: "rgba(87, 149, 96, 1)",
+  },
 ];

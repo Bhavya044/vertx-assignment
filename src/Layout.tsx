@@ -13,7 +13,6 @@ const Layout: React.FC<{ children: React.ReactElement }> = ({ children }) => {
   };
   return (
     <div className="flex flex-col lg:flex-row h-full min-h-screen">
-      {/* Sidebar */}
       <div className="hidden lg:flex lg:flex-col lg:w-[240px] border-r border-divider-100">
         <div className="flex items-center gap-3 border-b border-divider-100 h-[50px] px-3">
           <div className="flex justify-center items-center h-[50px]">
@@ -59,11 +58,13 @@ const Layout: React.FC<{ children: React.ReactElement }> = ({ children }) => {
         <div className="flex flex-col">
           <TopBar activeTab={activeTab} />
 
-          <div className="hidden lg:block">
+          <div className="hidden lg:block  pb-[60px] lg:pb-0">
             <Header currentTab={activeTab} />
           </div>
         </div>
-        <div className="p-6">{children}</div>
+        <div className="flex-1 h-full pb-20 lg:pb-0">
+          <div className="p-6">{children}</div>
+        </div>
       </div>
 
       {/* Mobile Navbar at the Bottom */}

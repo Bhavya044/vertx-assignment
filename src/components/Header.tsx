@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({ currentTab, setCurrentTab }) => {
             name="Bhavya Suri"
             onClick={() => setCurrentTab?.("Profile")}
           />
-          <img src="/Vertx-New.png" alt="Logo" className="h-6" />
+          <img src="/Vertx-New.png" alt="Logo" className="h-8 w-8" />
           <Icon iconName="menu" size={30} className="border-0" />
         </div>
         {/* Tabs Below Navbar */}

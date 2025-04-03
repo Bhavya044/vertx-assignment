@@ -5,6 +5,7 @@ interface AvatarProps {
   isOnline?: boolean;
   logo?: string;
   onClick?: () => void;
+  classname?: string;
 }
 
 const Avatar: React.FC<AvatarProps> = ({
@@ -12,6 +13,7 @@ const Avatar: React.FC<AvatarProps> = ({
   isOnline = false,
   logo,
   onClick,
+  classname,
 }) => {
   const initials = name
     ?.split(" ")
@@ -22,7 +24,7 @@ const Avatar: React.FC<AvatarProps> = ({
   return (
     <div className="relative inline-block" onClick={() => onClick?.()}>
       <div
-        className={`flex items-center text-xs justify-center rounded-full h-[30px] w-[30px] bg-gray-700 text-white font-semibold`}
+        className={`flex items-center  text-xs justify-center rounded-full h-[30px] w-[30px] bg-gray-700 text-white font-semibold ${classname}`}
       >
         {logo ? (
           <img

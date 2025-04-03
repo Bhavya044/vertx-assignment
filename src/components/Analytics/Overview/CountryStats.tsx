@@ -1,25 +1,37 @@
 import { countryData } from "../../../utils/helper.config";
+import Icon from "../../UI/Icon";
 
 const CountryStats = () => {
   return (
-    <div className="w-full max-w-md p-6 text-white rounded-lg shadow-lg">
+    <div className="w-full lg:mt-[-20px] lg:p-2 flex flex-col gap-4 rounded-lg">
       {countryData.map(({ country, flag, percentage, color }) => (
-        <div key={country} className="mb-4 flex items-center gap-3.5">
-          <img src={flag} alt={country} className="w-12 h-8 rounded-xs" />
-          <div className="flex flex-col w-full ">
+        <div key={country} className="flex items-center gap-4">
+          <img
+            src={flag}
+            alt={country}
+            className="w-10 h-6 rounded-sm object-cover"
+          />
+
+          <div className="flex flex-col w-full gap-0.5">
             <div className="flex justify-between items-center">
-              <span className="text-lg font-semibold">{country}</span>
-              <span className="text-[10px] font-medium">{percentage}%</span>
+              <span className="text-sm font-medium">{country}</span>
+              <span className="text-xs font-semibold">{percentage}%</span>
             </div>
-            <div className="flex-1 h-2 rounded-full bg-gray-700">
+            {/* Progress Bar */}
+            <div className="w-full h-2 bg-gray-700 rounded-full">
               <div
-                className={`h-2 rounded-full`}
+                className="h-2 rounded-full"
                 style={{ width: `${percentage}%`, backgroundColor: color }}
               ></div>
             </div>
           </div>
         </div>
       ))}
+      <div className="border-1 border-divider-100" />
+      <div className="mt-3 flex justify-end items-center gap-3">
+        <span className="text-[10px]">View all countries</span>
+        <Icon iconName="right-arrow" size={14} />
+      </div>
     </div>
   );
 };
