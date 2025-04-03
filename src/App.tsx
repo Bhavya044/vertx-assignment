@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import "./App.css";
-import Overview from "./pages/Analytics/Overview";
+import AnalyticsOverview from "./pages/Analytics/AnalyticsOverview";
+import ProfileOverview from "./pages/Profile/ProfileOverview";
 
 function App() {
   return (
@@ -9,8 +10,8 @@ function App() {
       <Router>
         <Layout>
           <Routes>
-            <Route path="/analytics/overview" element={<Overview />} />
-            <Route path="/profile/overview" element={<Overview />} />
+            <Route path="/analytics/overview" element={<AnalyticsOverview />} />
+            <Route path="/profile/overview" element={<ProfileOverview />} />
           </Routes>
         </Layout>
       </Router>

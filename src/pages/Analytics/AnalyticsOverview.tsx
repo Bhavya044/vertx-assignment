@@ -2,7 +2,7 @@ import Chart from "../../components/Analytics/Overview/Chart";
 import Demographics from "../../components/Analytics/Overview/Demographics";
 import Insights from "../../components/Analytics/Overview/Insights";
 
-const Overview = () => {
+const AnalyticsOverview = () => {
   return (
     <section className="space-y-6">
       <div className="text-[28px] font-extrabold hidden lg:block">
@@ -25,4 +25,4 @@ const Overview = () => {
   );
 };
 
-export default Overview;
+export default AnalyticsOverview;

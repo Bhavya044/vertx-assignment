@@ -3,4 +3,5 @@
 @theme {
   --color-divider-100: oklch(29.19% 0 0);
   --color-inactive-100: oklch(42.39% 0 0);
+  --font-jetBrains: JetBrains Mono;
 }

@@ -11,10 +11,12 @@ const Card: React.FC<ICard> = ({ action, title, children, className }) => {
     <div
       className={`flex flex-col gap-3.5 p-3.5 border border-divider-100 rounded-lg ${className} `}
     >
-      <div className="flex justify-between">
-        {title ? <span className="text-xl font-bold"> {title}</span> : null}
-        {action}
-      </div>
+      {title || action ? (
+        <div className="flex justify-between">
+          {title ? <span className="text-xl font-bold"> {title}</span> : null}
+          {action}
+        </div>
+      ) : null}
       {children}
     </div>
   );

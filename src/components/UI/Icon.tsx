@@ -9,6 +9,10 @@ const iconMap: Record<iconNames, string> = {
   dealroom: "/connect.svg",
   menu: "/menu.svg",
   "right-arrow": "/right-arrow.svg",
+  verifiedBadge: "/Twitter_Verified.png",
+  linkedin: "/Linkedin.png",
+  twitter: "/Twitter.png",
+  gmail: "/Gmail.png",
 };
 
 interface IconProps {

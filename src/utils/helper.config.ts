@@ -5,7 +5,11 @@ export type iconNames =
   | "activity"
   | "dealroom"
   | "menu"
-  | "right-arrow";
+  | "right-arrow"
+  | "verifiedBadge"
+  | "linkedin"
+  | "twitter"
+  | "gmail";
 
 export const users = [
   { name: "Bhavya Suri", isOnline: true },
@@ -70,5 +74,39 @@ export const countryData = [
     flag: "/flags/uae.jpg",
     percentage: 7,
     color: "rgba(87, 149, 96, 1)",
+  },
+];
+
+export const companies = [
+  {
+    name: "Vertx",
+    foundedYear: 2025,
+    category: "Fintech",
+    role: "CEO",
+    profileLink: "#profile",
+    bgLabel: "#579560",
+    img: "/Vertx-New.png",
+  },
+  {
+    name: "Comp 1",
+    foundedYear: 2023,
+    category: "QuickCommerce",
+    role: "PROPRIETOR",
+    profileLink: "#profile",
+    status: "abc",
+    bgLabel: "#B1BDEB",
+    acquiredBy: "abc",
+  },
+];
+
+export const experiences = [
+  {
+    name: "Company 1",
+  },
+  {
+    name: "Company 2",
+  },
+  {
+    name: "Company 2",
   },
 ];
