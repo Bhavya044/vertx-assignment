@@ -2,17 +2,17 @@ import React from "react";
 import { iconNames } from "../../utils/helper.config";
 
 const iconMap: Record<iconNames, string> = {
-  dashboard: "/dashboard.svg",
-  analytics: "/analytics.svg",
-  activity: "/bell.svg",
-  connect: "/globe.svg",
-  dealroom: "/connect.svg",
-  menu: "/menu.svg",
-  "right-arrow": "/right-arrow.svg",
-  verifiedBadge: "/Twitter_Verified.png",
-  linkedin: "/Linkedin.png",
-  twitter: "/Twitter.png",
-  gmail: "/Gmail.png",
+  dashboard: "/icons/dashboard.svg",
+  analytics: "/icons/analytics.svg",
+  activity: "/icons/bell.svg",
+  connect: "/icons/globe.svg",
+  dealroom: "/icons/connect.svg",
+  menu: "/icons/menu.svg",
+  "right-arrow": "/icons/right-arrow.svg",
+  verifiedBadge: "/icons/Twitter_Verified.png",
+  linkedin: "/icons/Linkedin.png",
+  twitter: "/icons/Twitter.png",
+  gmail: "/icons/Gmail.png",
 };
 
 interface IconProps {

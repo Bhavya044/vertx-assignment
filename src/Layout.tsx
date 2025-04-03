@@ -16,7 +16,11 @@ const Layout: React.FC<{ children: React.ReactElement }> = ({ children }) => {
       <div className="hidden lg:flex lg:flex-col lg:w-[240px] border-r border-divider-100">
         <div className="flex items-center gap-3 border-b border-divider-100 h-[50px] px-3">
           <div className="flex justify-center items-center h-[50px]">
-            <Avatar logo="/vertxLogo.jpeg" />
+            <Avatar
+              logo="/Vertx-New.png"
+              classname="bg-white"
+              imgSrcClass="h-4 w-5"
+            />
           </div>
 
           <span className="font-bold text-lg ml-7.5">Vertxlabs, Inc</span>

@@ -6,6 +6,7 @@ interface AvatarProps {
   logo?: string;
   onClick?: () => void;
   classname?: string;
+  imgSrcClass?: string;
 }
 
 const Avatar: React.FC<AvatarProps> = ({
@@ -14,6 +15,7 @@ const Avatar: React.FC<AvatarProps> = ({
   logo,
   onClick,
   classname,
+  imgSrcClass,
 }) => {
   const initials = name
     ?.split(" ")
@@ -30,7 +32,10 @@ const Avatar: React.FC<AvatarProps> = ({
           <img
             src={logo}
             alt={name}
-            className="rounded-full object-cover w-full h-full"
+            className={
+              imgSrcClass ??
+              `rounded-full object-cover w-full h-full imgSrcClass`
+            }
           />
         ) : (
           initials
