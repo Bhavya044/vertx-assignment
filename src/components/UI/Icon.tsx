@@ -8,6 +8,7 @@ const iconMap: Record<iconNames, string> = {
   connect: "/globe.svg",
   dealroom: "/connect.svg",
   menu: "/menu.svg",
+  "right-arrow": "/right-arrow.svg",
 };
 
 interface IconProps {

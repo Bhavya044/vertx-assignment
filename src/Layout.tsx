@@ -2,12 +2,8 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import Avatar from "./components/UI/Avatar";
 import Header from "./components/Header";
-
-const users = [
-  { name: "Bhavya Suri", isOnline: true },
-  { name: "John Doe", isOnline: false },
-  { name: "Alice Smith", isOnline: true },
-];
+import { users } from "./utils/helper.config";
+import TopBar from "./components/TopBar";
 
 const Layout: React.FC<{ children: React.ReactElement }> = ({ children }) => {
   const [activeTab, setActiveTab] = useState("Analytics");
@@ -20,12 +16,10 @@ const Layout: React.FC<{ children: React.ReactElement }> = ({ children }) => {
       {/* Sidebar */}
       <div className="hidden lg:flex lg:flex-col lg:w-[240px] border-r border-divider-100">
         <div className="flex items-center gap-3 border-b border-divider-100 h-[50px] px-3">
-          {/* Logo */}
           <div className="flex justify-center items-center h-[50px]">
             <Avatar logo="/vertxLogo.jpeg" />
           </div>
 
-          {/* Company Name */}
           <span className="font-bold text-lg ml-7.5">Vertxlabs, Inc</span>
         </div>
 
@@ -63,27 +57,13 @@ const Layout: React.FC<{ children: React.ReactElement }> = ({ children }) => {
       {/* Main Content */}
       <div className="flex-1 h-full">
         <div className="flex flex-col">
-          {/* Top Bar */}
-          <div className="lg:flex hidden items-center justify-between h-[50px] px-8 border-b border-divider-100 text-base">
-            <span className="font-semibold">{activeTab}</span>
+          <TopBar activeTab={activeTab} />
 
-            <div className="flex items-center gap-6">
-              <div className="h-[50px] flex items-center px-8 py-2.5 text-center border-x border-divider-100">
-                Activity
-              </div>
-              <span className="cursor-pointer hover:text-gray-400">
-                Log out
-              </span>
-            </div>
-          </div>
-
-          {/* Header */}
           <div className="hidden lg:block">
             <Header currentTab={activeTab} />
           </div>
         </div>
-
-        {children}
+        <div className="p-6">{children}</div>
       </div>
 
       {/* Mobile Navbar at the Bottom */}

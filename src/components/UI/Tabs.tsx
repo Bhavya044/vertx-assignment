@@ -8,17 +8,17 @@ interface TabProps {
 
 const Tabs: React.FC<TabProps> = ({ tabs, activeTab, setActiveTab }) => {
   return (
-    <div className="w-full mt-10 lg:mt-0 flex justify-between">
-      <div className="flex  w-full justify-evenly lg:justify-start text-white text-sm overflow-x-auto whitespace-nowrap ">
+    <div className="w-full mt-10 lg:mt-0 flex justify-between lg:border-0 border-b border-b-divider-100">
+      <div className="flex  w-full justify-evenly lg:justify-start  lg:text-sm text-xs font-semibold overflow-x-auto whitespace-nowrap ">
         {tabs.map((tab, index) => (
           <button
             key={tab.id}
             className={`relative py-3 text-center ${
               index === 0 ? "lg:pr-4" : "lg:px-6"
-            } lg:border-r lg:border-divider-100 lg:text-white  ${
+            } lg:border-r lg:border-divider-100  ${
               activeTab === tab.id
-                ? "font-bold"
-                : "text-gray-400 lg:text-inactive-100 hover:text-white"
+                ? "lg:font-bold text-white"
+                : " lg:text-inactive-100 text-white hover:text-white"
             }`}
             onClick={() => setActiveTab(tab.id)}
           >
